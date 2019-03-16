@@ -1,0 +1,31 @@
+int check = 0;
+int count = 2;
+
+void setup() {
+  // put your setup code here, to run once:
+  for(int i = 2; i < 10; i++){
+    pinMode(i, OUTPUT);
+  }
+}
+
+void loop() {
+  if(digitalRead(11) == HIGH){
+    digitalWrite(count, HIGH);
+    delay(300);
+    digitalWrite(count, LOW);
+    delay(300);
+    count = count + 1;
+  }
+  if(digitalRead(11) == LOW){
+    digitalWrite(count, HIGH);
+    delay(300);
+    digitalWrite(count, LOW);
+    delay(300);
+    count = count - 1;
+  }
+  if(count > 10){
+    count = 2;
+  }else if(count < 2){
+    count = 10;
+  }
+}
