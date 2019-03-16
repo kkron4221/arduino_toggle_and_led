@@ -10,3 +10,5 @@ prototype_2:
     First relay is Ok.
     But second relay is wrong.
   
+product:
+  Finished.
